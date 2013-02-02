@@ -1,7 +1,7 @@
 .. Web-Dev-Tutorial master file
 
 Welcome to the Web-Dev-Tutorial
-============================
+===============================
 
 Introduction
 ------------
