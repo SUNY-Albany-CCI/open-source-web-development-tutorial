@@ -15,9 +15,11 @@ Contents:
    :maxdepth: 2
 
    HTML5/index.rst
+   Databases/index.rst
 
 .. index::
    single: HTML5
+   single: Databases
 
 
 Indices and tables
