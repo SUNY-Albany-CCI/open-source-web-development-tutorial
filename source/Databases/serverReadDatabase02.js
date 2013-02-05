@@ -7,13 +7,8 @@ http.createServer( function(req, res) {
 
   console.log('Server Started ');
 
-  // var cellvalue = data.sheets.sheet[0].rows.row[0].cell[0]['$t'];
-
-  // console.log("Cell =",cellvalue);
-
   parseXlsx('ClassRoster.xlsx', function(data) {
 
-      // data is an array of arrays
       res.writeHead(200, {'content-type': 'text/plain'});
 
       res.write('Welcome to the Spreadsheet reader !\n');
@@ -27,7 +22,7 @@ http.createServer( function(req, res) {
 
       res.end("Good Bye !\n");
 
-      console.log(cell11);
+      console.log("Database cell11 = ", cell11);
 
   });
 
