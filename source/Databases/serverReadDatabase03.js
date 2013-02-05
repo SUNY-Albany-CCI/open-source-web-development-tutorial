@@ -20,13 +20,13 @@ http.createServer( function(req, res) {
       var rowdata  = data[row];
       var celldata = rowdata[col];
 
-      res.write("Database cell ",row," ",col," = ");
+      res.write("Database cell "+row+" "+col+" = ");
       res.write(celldata);
       res.write("\n");
 
       res.end("Good Bye !\n");
 
-      console.log("Database celldata = ", celldata);
+      console.log("Database cell ",row,",",col," data = ", celldata);
 
   });
 
