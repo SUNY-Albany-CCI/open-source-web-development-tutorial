@@ -25,7 +25,20 @@ Simply type
       sudo apt-get install nodejs
 
 
-Once we have node.js installed, we also need to bring some Node packages in. To do this we install also the node package manage (npm), with the command
+It is also possible to build Node.js from its source code by doing the following
+
+::
+
+     sudo apt-get install build-essential openssl libssl-dev pkg-config
+     wget http://nodejs.org/dist/v0.8.18/node-v0.8.18.tar.gz
+     tar -zxf node-v0.8.18.tar.gz
+     cd node-v0.8.18
+     ./configure
+     make
+     sudo make install
+
+Once we have node.js installed, we also need to bring some Node packages in. To
+do this we install also the node package manage (npm), with the command
 
 ::
 
@@ -47,7 +60,69 @@ and then we proceed to install the Excel driver with the command
 
 ::
 
-      npm install excel
+      sudo npm install excel
+
+
+Another possible driver is the "office" one.
+
+The installation of the Office driver has a prerequisite the xlhtml and unoconv
+utilities, that can be found in the xlhtml and unoconv Debian packages
+respectively. Therefore we install these package first with the commands:
+
+::
+
+     sudo apt-get install xlhtml
+     sudo apt-get install unoconv
+
+and then we proceed to install the Office driver with the command
+
+::
+
+      sudo npm install office
+
+
+Hello World
+-----------
+
+To test our node.js installation we can write the following "Hello World"
+example, of course in a file named HelloWorld.js
+
+::
+
+  var http = require('http');
+  http.createServer( function(req, res) {
+    res.writeHead(200, {'content-type': 'text/plain'});
+    res.end("Hello, World!\n");
+  }).listen(8124);
+  console.log('Server running on port 8124');
+
+Then we can launch this minimal HTTP server with the command
+
+::
+
+   nodejs  HelloWorld.js
+
+and now go and open a Web Browser client giving to it the IP address of our
+server with the ":8124" port specification appended.
+
+for example
+
+::
+
+    firefox   http://192.168.122.186:8124
+
+
+Now we can try opening an Excel file to use it as a database.
+
+We write the following in the server file
+
+::
+
+  var parseXlsx = require('excel');
+
+  parseXlsx('MyDatabase.xlsx', function(data) {
+      // data is an array of arrays
+  });
 
 
 
