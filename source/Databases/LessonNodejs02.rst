@@ -139,7 +139,7 @@ we close the parseXlsx function
 
     });
 
-we close the create function
+we close the createServer function
 
 ::
 
@@ -147,17 +147,22 @@ we close the create function
 
 and also start listening in port 8124.
 
-An extra message in the console helps us to remember the port number in which our web server is listening.
+An extra message in the console helps us to remember the port number in which
+our web server is listening.
 
 ::
 
   console.log('Server running on port 8124');
 
+
+Running
+-------
+
 At this point we are ready to launch our HTTP server with the command
 
 ::
 
-   nodejs  HelloWorld.js
+   nodejs  serverReadDatabase02.js
 
 and now go and open a Web Browser client giving to it the IP address of our
 server with the ":8124" port specification appended.

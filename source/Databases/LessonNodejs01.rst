@@ -13,7 +13,11 @@ example, of course in a file named HelloWorld.js
   }).listen(8124);
   console.log('Server running on port 8124');
 
-Then we can launch this minimal HTTP server with the command
+
+Running
+-------
+
+We can now launch this minimal HTTP server with the command
 
 ::
 
