@@ -22,7 +22,7 @@ We write the following in the server file:
 
     console.log('Server Started ');
 
-    parseXlsx('ClassRoster.xlsx', function(data) {
+    parseXlsx('FavoriteFruit.xlsx', function(data) {
 
         var query = require('url').parse(req.url).query;
         var row = require('querystring').parse(query).row;
@@ -80,7 +80,7 @@ With the parseXlsx function below, we open the Spreadsheet file with extension
 
 ::
 
-    parseXlsx('ClassRoster.xlsx', function(data) {
+    parseXlsx('FavoriteFruit.xlsx', function(data) {
 
 Now we can take advantage of the "url" package and its built-in functionality to parse a query that is appended to a URL.
 

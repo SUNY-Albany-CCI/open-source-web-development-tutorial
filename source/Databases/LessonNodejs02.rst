@@ -21,7 +21,7 @@ We write the following in the server file:
 
     console.log('Server Started ');
 
-    parseXlsx('ClassRoster.xlsx', function(data) {
+    parseXlsx('FavoriteFruit.xlsx', function(data) {
 
         res.writeHead(200, {'content-type': 'text/plain'});
 
@@ -76,7 +76,7 @@ and we open the Spreadsheet file with extension .xlsx
 
 ::
 
-    parseXlsx('ClassRoster.xlsx', function(data) {
+    parseXlsx('FavoriteFruit.xlsx', function(data) {
 
 Note that the full content of the spreadsheet will be loaded into the "data"
 variable, in the form of an array of arrays. The arrays are organized in such a
