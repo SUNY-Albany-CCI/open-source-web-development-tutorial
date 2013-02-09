@@ -1,6 +1,8 @@
 Opening Excel
 =============
 
+.. highlight:: javascript
+
 In this exercise we are going to open an excel spreadshet from node.js and
 expose its content throught a web server.
 
@@ -9,6 +11,7 @@ We will put the source code in a file named
       serverReadDatabase02.js
 
 We write the following in the server file:
+
 
 ::
 

@@ -4,7 +4,7 @@ Hello World
 To test our node.js installation we can write the following "Hello World"
 example, of course in a file named HelloWorld.js
 
-::
+.. code-block:: javascript
 
   var http = require('http');
   http.createServer( function(req, res) {
