@@ -12,5 +12,3 @@ Contents:
    LessonNodejs02.rst
    LessonNodejs03.rst
 
-.. index::
-

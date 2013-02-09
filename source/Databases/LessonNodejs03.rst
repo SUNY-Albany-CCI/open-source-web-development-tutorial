@@ -1,6 +1,8 @@
 Querying Excel
 ==============
 
+.. highlight:: javascript
+
 In this exercise we are going to open an excel spreadshet from node.js and
 selectively expose its content by using a query in the URL composed on the
 client side.
