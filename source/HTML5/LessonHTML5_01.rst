@@ -1,6 +1,9 @@
 Lesson 01
 =========
 
+The Basics
+----------
+
 .. highlight:: html
 
 The following is the minimal set of lines required for an HTML page.
@@ -28,4 +31,10 @@ For example, see the "head" and "title" tags in
   <head>
   <title>Title of the document</title>
   </head>
+
+
+Exercise
+--------
+
+* Change the message in the body of the document.
 
