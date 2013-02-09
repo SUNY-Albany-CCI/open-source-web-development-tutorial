@@ -30,7 +30,7 @@ for example
 
 ::
 
-    firefox   http://192.168.122.186:8124
+    firefox   http://166.78.129.118:8124
 
 Exercise
 --------

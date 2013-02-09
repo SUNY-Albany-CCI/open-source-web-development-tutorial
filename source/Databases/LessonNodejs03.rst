@@ -206,7 +206,7 @@ for example
 
 ::
 
-    firefox   http://192.168.122.186:8124/?row=3&col=2
+    firefox   http://166.78.129.118:8124/?row=3&col=2
 
 
 Exercise
