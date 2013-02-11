@@ -11,4 +11,5 @@ Contents:
    LessonNodejs01.rst
    LessonNodejs02.rst
    LessonNodejs03.rst
+   LessonNodejs04.rst
 
