@@ -27,6 +27,51 @@ It can be installed with the command
     sudo npm install nodem
 
 
+Hello World
+-----------
+
+The basic usage of M from node.js can start with the following example
+
+::
+
+
+  var http = require('http');
+
+  var nodem = require('nodem');
+
+  var db = new nodem.Gtm();
+
+  var port = 8124;
+
+  http.createServer( function(req, res) {
+
+    console.log('Server Started ');
+
+    db.open();
+
+    var node;
+
+    node = {global: 'myGlobal', subscripts: ["testing", i], data: setglobal};
+
+    db.set(node);
+
+    db.close()
+
+
+    res.writeHead(200, {'content-type': 'text/plain'});
+
+    res.write('Welcome to the M reader !\n');
+
+    res.write('Added ',setglobal,' to database');
+
+    res.end("Good Bye !\n");
+
+  }).listen(port);
+
+
+  console.log('Server running on port ', port);
+
+
 .. _Instructions for installing M: https://www.opensourcesoftwarepractice.org/OSDB-Tutorial/M/Installation.html
 
 .. _NodeM: https://npmjs.org/package/nodem
