@@ -1,0 +1,19 @@
+<st2:container rootPath="/vista/st-2" title="Hello World 18">
+
+  <st2:homeScreen>
+    <st2:startupImage size="320x460" url="examples/kitchensink/resources/loading/Homescreen.jpg" />
+    <st2:startupImage size="320x480" url="examples/kitchensink/resources/loading/Default.jpg" />
+    <st2:startupImage size="768x1004" url="examples/kitchensink/resources/loading/Homescreen~ipad.jpg" />
+    <st2:icon size="57" url="examples/kitchensink/resources/icons/icon.png" />
+    <st2:icon size="72" url="examples/kitchensink/resources/icons/icon~ipad.png" />
+    <st2:icon size="114" url="examples/kitchensink/resources/icons/icon@2x.png" />
+    <st2:icon size="144" url="examples/kitchensink/resources/icons/icon~ipad@2x.png" />
+  </st2:homeScreen>
+
+  <st2:container id="helloworld18" scrollable="vertical">
+    <st2:toolbar title="Hello 18" docked="bottom" id="topToolbar">
+       <st2:button text="Click Me" handler="function() {alert('You clicked the button')}" />
+    </st2:toolbar>
+    <st2:toolbar docked="bottom" id="bottomToolbar" />
+  </st2:container>
+</st2:container>

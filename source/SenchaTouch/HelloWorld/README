@@ -1,0 +1,36 @@
+
+If in the dEWDrop VM 
+
+Create a directory
+
+     /home/vista/www/ewd/st2demo
+
+put these .ewd files in the directory
+
+     /home/vista/www/ewd/st2demo
+
+copy the .m files in the directory
+
+     /home/vista/www/r
+
+copy the .js files in the directory
+
+     /home/vista/www/js
+
+cd into the directory
+
+     /home/vista/www/ewd/st2demo
+
+launch gtm with the command
+
+      mumps -dir
+
+once you get the GT.M prompt type
+
+    do compileAll^%zewdAPI("st2demo")
+
+from your host machine open the URL
+
+    https://IPNUMBER/vista/st2demo/helloworld01.ewd
+
+

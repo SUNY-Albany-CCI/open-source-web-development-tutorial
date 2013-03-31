@@ -1,0 +1,7 @@
+<st2:container rootPath="/vista/st-2">
+  <st2:container id="helloworld13">
+    <st2:toolbar title="Hello" docked="bottom">
+       <st2:button text="Click Me" handler="function() {alert('You clicked the button')}" />
+    </st2:toolbar>
+  </st2:container>
+</st2:container>

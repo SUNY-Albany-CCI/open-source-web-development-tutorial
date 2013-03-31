@@ -1,0 +1,7 @@
+<st2:fragment onBeforeRender="getHello^ST2Demo01">
+  <st2:panel html="#hello" object="myPanel" var="true">
+    <st2:listeners>
+      <st2:listener painted="alert('painted!');" />
+    </st2:listeners>
+  </st2:panel>
+</st2:fragment>

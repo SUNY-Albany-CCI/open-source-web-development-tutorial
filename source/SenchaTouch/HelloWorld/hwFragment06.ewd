@@ -1,0 +1,16 @@
+<st2:fragment onBeforeRender="denyAccess^ST2Demo03">
+  <st2:panel html="#hello" id="myAddedPanel" object="myPanel" var="true">
+    <st2:listeners>
+      <st2:listener painted="function(panel, eopts) { alert(panel.id + ' painted!');}" />
+    </st2:listeners>
+  </st2:panel>
+
+  <st2:js at="top">
+    alert("This goes before any Sencha Touch 2 code");
+  </st2:js>
+
+  <st2:js at="bottom">
+    alert("This goes after any Sencha Touch 2 code");
+  </st2:js>
+
+</st2:fragment>

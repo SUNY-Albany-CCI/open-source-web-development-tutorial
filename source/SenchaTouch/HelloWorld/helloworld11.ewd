@@ -1,0 +1,4 @@
+<st2:container rootPath="/vista/st-2" disableGetPage="true" onBeforeRender="initAccess^ST2Demo02">
+  <script src="/js/st2Demo01.js" />
+  <st2:container addPage="hwFragment05" />
+</st2:container>

@@ -1,0 +1,3 @@
+<st2:fragment onBeforeRender="getHello^ST2Demo01">
+  <st2:panel html="#hello" object="myPanel" var="true" />
+</st2:fragment>
