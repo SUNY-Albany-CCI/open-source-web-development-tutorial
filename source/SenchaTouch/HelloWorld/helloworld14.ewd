@@ -1,4 +1,4 @@
-<st2:container rootPath="/vista/st-2">
+<st2:container rootPath="/st-2">
   <st2:container id="helloworld13">
     <st2:toolbar title="Hello" docked="bottom">
        <st2:button text="Click Me" nextPage="hwFragment07" addTo="helloworld13" nvp="a=12 &b=xyz" />

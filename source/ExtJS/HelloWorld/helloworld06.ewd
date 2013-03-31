@@ -1,4 +1,4 @@
-<ext4:container rootPath="/vista/ext-4" onBeforeRender="getHello^ext4Demo02">
+<ext4:container rootPath="/ext-4" onBeforeRender="getHello^ext4Demo02">
   <ext4:panel title="Outer Panel" id="helloWorld1" object="myPanel" var="true">
     <ext4:panel title="#myTitle" html="#hello" id="helloWorld2" width="400" height="100" />
   </ext4:panel>

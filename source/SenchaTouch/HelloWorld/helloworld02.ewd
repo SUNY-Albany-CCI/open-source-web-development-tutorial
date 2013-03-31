@@ -1,3 +1,3 @@
-<st2:container rootPath="/vista/st-2">
+<st2:container rootPath="/st-2">
   <st2:panel id="helloworldPanel" fullscreen="true" layout="auto" html="Hello World" />
 </st2:container>

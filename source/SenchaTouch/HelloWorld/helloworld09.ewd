@@ -1,4 +1,4 @@
-<st2:container rootPath="/vista/st-2">
+<st2:container rootPath="/st-2">
   <script src="/js/st2Demo01.js" />
   <st2:container addPage="hwFragment03" />
   <script type="text/javascript">

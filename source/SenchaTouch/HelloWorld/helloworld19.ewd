@@ -1,6 +1,6 @@
-<st2:container rootPath="/vista/st-2" title="Hello World 19">
+<st2:container rootPath="/st-2" title="Hello World 19">
 
-  <script src="/vista/js/st2Demo02.js" />
+  <script src="/js/st2Demo02.js" />
 
   <st2:homeScreen>
     <st2:startupImage size="320x460" url="examples/kitchensink/resources/loading/Homescreen.jpg" />

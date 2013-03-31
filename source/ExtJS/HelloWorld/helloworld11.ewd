@@ -1,4 +1,4 @@
-<ext4:container rootPath="/vista/ext-4">
-  <script src="/vista/js/ext4Demo01.js" />
+<ext4:container rootPath="/ext-4">
+  <script src="/js/ext4Demo01.js" />
   <ext4:panel title="Outer Panel 2" id="helloWorld1" object="myPanel" var="true" addPage="hwFragment05">
 </ext4:container>

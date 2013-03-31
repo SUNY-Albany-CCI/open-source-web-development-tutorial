@@ -1,4 +1,4 @@
-<st2:container rootPath="/vista/st-2" title="Hello World 18">
+<st2:container rootPath="/st-2" title="Hello World 18">
 
   <st2:homeScreen>
     <st2:startupImage size="320x460" url="examples/kitchensink/resources/loading/Homescreen.jpg" />
