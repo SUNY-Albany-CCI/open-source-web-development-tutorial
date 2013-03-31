@@ -1,0 +1,18 @@
+<ext4:fragment onBeforeRender="getHello^ext4Demo02">
+  <ext4:panel title="Outer Injected Panel" id="helloWorld2" width="400" height="100">
+    <ext4:panel title="Inner Injected Panel" id="myInnerPanel" html="#hello">
+      <ext4:listeners>
+        <ext4:listener render="function(panel,eopts) {alert(panel.id + ' rendered!');}" />
+      </ext4:listeners>
+    </ext4:panel>
+  </ext4:panel>
+
+  <ext4:js at="top">
+    alert("This goes before any ExtJS code");
+  </ext4:js> 
+
+  <ext4:js at="bottom">
+    alert("This goes after any ExtJS code");
+  </ext4:js> 
+
+</ext4:fragment>

@@ -1,0 +1,5 @@
+<ext4:fragment onBeforeRender="getHello^ext4Demo02">
+  <ext4:panel title="Outer Injected Panel" id="helloWorld2" width="400" height="100" />
+    <ext4:panel title="Inner Injected Panel" html="#hello" />
+  </ext4:panel>
+</ext4:fragment>
