@@ -77,4 +77,6 @@ popd
 cp  build.sh    $EWDTreeDirectory/Apps
 cp  runEWDwithNodeJS.sh   $EWDTreeDirectory/nodejs
 cp  ewdConfig.js   $EWDTreeDirectory/nodejs
+ln -s /usr/local/lib/node_modules/ $EWDTreeDirectory/nodejs/
+cp  index_for_ewdgateway2.js $EWDTreeDirectory/nodejs/node_modules/ewdgateway2/index.js
 
