@@ -28,6 +28,7 @@ popd
 #   Install Node.js Modules
 #
 
+npm install -g socket.io
 npm install -g nodem
 npm install -g ewdglobals
 npm install -g ewdgateway2
