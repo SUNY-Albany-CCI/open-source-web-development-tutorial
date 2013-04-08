@@ -15,7 +15,7 @@ var params = {
   },
   database: {
     type: 'gtm',
-    nodePath:"/home/node_modules/nodem",
+    nodePath:"nodem",
     outputFilePath: outputFilePathName,
   },
   traceLevel: 8,
