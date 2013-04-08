@@ -2,8 +2,11 @@
 #
 #   Provide a Port Number as argument
 #
-date >> /INF362-EWD/nodejs/`whoami`/ewdLog.txt
-tail -f /INF362-EWD/nodejs/`whoami`/ewdLog.txt &
-nodejs  /INF362-EWD/nodejs/ewdConfig.js `whoami`  $1
+EWDTreeDirectory='/INF362-EWD'
+EWDAppsNodejs=$EWDTreeDirectory/nodejs
+
+date >> $EWDAppsNodejs/`whoami`/ewdLog.txt
+tail -f $EWDAppsNodejs/`whoami`/ewdLog.txt &
+nodejs  $EWDAppsNodejs/ewdConfig.js `whoami`  $1
 stty sane
 

@@ -1,6 +1,12 @@
+EWDInstallationRoot='/opt/ewd'
+EWDBuildVersion='960'
+EWDRoutines=$EWDInstallationRoot/$EWDBuildVersion/routines
+EWDTreeDirectory='/INF362-EWD'
+EWDAppsGTM=$EWDTreeDirectory/gtm
+
 export gtm_dist=/opt/gtm
 export gtmgbldir="/data/gtm/database"
-export gtmroutines="/data/gtm/o(/data/gtm/r) /opt/ewd/960/routines/6.0-000(/opt/ewd/960/routines) /INF362-EWD/gtm/o(/INF362-EWD/gtm/r) $gtm_dist/  /opt/gtm/libgtmutil.so"
+export gtmroutines="$EWDRoutines/6.0-000($EWDRoutines) $EWDAppsGTM/o($EWDAppsGTM/r) $gtm_dist/  /opt/gtm/libgtmutil.so"
 alias gtm='$gtm_dist/mumps -dir'
 
 export LD_LIBRARY_PATH=/usr/local/lib:/opt/gtm

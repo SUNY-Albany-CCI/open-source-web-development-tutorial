@@ -3,13 +3,16 @@
 #   Run this script with sudo.
 #
 
-mkdir -p  /data/gtm/database
-mkdir -p  /data/gtm/o
-mkdir -p  /data/gtm/r
+EWDTreeDirectory='/INF362-EWD'
+EWDAppsGTM=$EWDTreeDirectory/gtm
+
+mkdir -p  $EWDAppsGTM/database
+mkdir -p  $EWDAppsGTM/o
+mkdir -p  $EWDAppsGTM/r
 
 export gtm_dist=/opt/gtm
-export gtmgbldir="/data/gtm/database"
-export gtmroutines="/data/gtm/o(/data/gtm/r) $gtm_dist/  /opt/gtm/libgtmutil.so"
+export gtmgbldir="$EWDAppsGTM/database"
+export gtmroutines="$EWDAppsGTM/o($EWDAppsGTM/r) $gtm_dist/  /opt/gtm/libgtmutil.so"
 alias gtm='$gtm_dist/mumps -dir'
 
 $gtm_dist/mumps -r GDE

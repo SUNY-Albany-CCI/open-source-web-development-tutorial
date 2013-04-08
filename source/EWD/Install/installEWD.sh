@@ -1,19 +1,28 @@
 #!/bin/bash
 
 #
-#   Install EWD Itself
+#  Set up required environment variables
 #
 source ./add_to_bashrc.txt
 
-mkdir -p /opt/ewd
-pushd /opt/ewd
+#
+#   Install EWD Itself
+#
+EWDInstallationRoot='/opt/ewd'
+mkdir -p $EWDInstallationRoot
+pushd $EWDInstallationRoot
 
 git clone git://github.com/robtweed/EWD.git
-mkdir -p 960
-cp -r ./EWD/* ./960
-mkdir -p 960/routines/6.0-000
-mv ./960/*.m   ./960/routines/
-pushd ./960/routines/6.0-000
+
+#
+#   Prepare directory for specific EWD version
+#
+EWDBuildVersion='960'
+mkdir -p $EWDBuildVersion
+cp -r ./EWD/* ./$EWDBuildVersion
+mkdir -p $EWDBuildVersion/routines/6.0-000
+mv ./$EWDBuildVersion/*.m   ./$EWDBuildVersion/routines/
+pushd ./$EWDBuildVersion/routines/6.0-000
 $gtm_dist/mumps ../*.m
 popd
 
@@ -33,8 +42,39 @@ popd
 #
 #  Ensure that the user add to its gtmroutines environment variable the path
 #
-#         /opt/ewd/960/routines/6.0-000(/opt/ewd/960/routines)
+#         $EWDInstallationRoot/$EWDBuildVersion/routines/6.0-000($EWDInstallationRoot/$EWDBuildVersion/routines)
 #
+
+
+
+#
+#   Create Directory for the installation
+#
+EWDTreeDirectory='/INF362-EWD'
+EWDAppsGTM=$EWDTreeDirectory/gtm
+
+mkdir -p $EWDTreeDirectory
+mkdir -p $EWDTreeDirectory/Apps
+mkdir -p $EWDTreeDirectory/nodejs
+mkdir -p $EWDTreeDirectory/www
+mkdir -p $EWDTreeDirectory/www/resources
+mkdir -p $EWDAppsGTM/o
+mkdir -p $EWDAppsGTM/r
+chmod -R 777 $EWDTreeDirectory
+
+cp $EWDInstallationRoot/$EWDBuildVersion/ewdMgr/resourceFiles/*  $EWDTreeDirectory/www/resources/
+
+
+#
+#    Set up the zewd("config") global
+#
+cp configEWD.m  $EWDAppsGTM/r
+pushd $EWDAppsGTM/o
+$gtm_dist/mumps ../r/configEWD.m
+$gtm_dist/mumps -r setup^configEWD
+popd
+
+
 
 #
 #   Install Node.js Modules
@@ -45,34 +85,15 @@ npm install -g nodem
 npm install -g ewdglobals
 npm install -g ewdgateway2
 
+
 #
 #   Post installation of nodem
 #
-cp /usr/local/lib/node_modules/nodem/src/node.m   /data/gtm/r
-pushd /data/gtm/o
+cp /usr/local/lib/node_modules/nodem/src/node.m   $EWDAppsGTM/r
+pushd $EWDAppsGTM/o
 $gtm_dist/mumps ../r/node.m
 popd
 
-#
-#   Create Directory for the installation
-#
-EWDTreeDirectory='/INF362-EWD'
-mkdir -p $EWDTreeDirectory
-mkdir -p $EWDTreeDirectory/Apps
-mkdir -p $EWDTreeDirectory/nodejs
-mkdir -p $EWDTreeDirectory/gtm/o
-mkdir -p $EWDTreeDirectory/gtm/r
-mkdir -p $EWDTreeDirectory/www
-mkdir -p $EWDTreeDirectory/www/resources
-chmod -R 777 $EWDTreeDirectory
-
-cp configEWD.m  $EWDTreeDirectory/gtm/r
-pushd $EWDTreeDirectory/gtm/o
-$gtm_dist/mumps ../r/configEWD.m
-$gtm_dist/mumps -r setup^configEWD
-popd
-
-cp /opt/ewd/960/ewdMgr/resourceFiles/*  $EWDTreeDirectory/www/resources/
 
 #
 #  Install Sencha Touch and ExtJS
@@ -92,10 +113,10 @@ popd
 #
 #  by adding the following line at the end of their ~/.bashrc file
 #
-#         source /data/gtm/setup/add_to_bashrc.txt
+#         source $EWDAppsGTM/setup/add_to_bashrc.txt
 #
-mkdir -p  /data/gtm/setup
-cp  add_to_bashrc.txt  /data/gtm/setup/
+mkdir -p  $EWDAppsGTM/setup
+cp  add_to_bashrc.txt  $EWDAppsGTM/setup/
 
 
 

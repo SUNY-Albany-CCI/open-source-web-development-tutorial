@@ -3,8 +3,10 @@ var ewd = require('ewdgateway2');
 var myUseName = process.argv[2];
 var myPort    = process.argv[3];
 
-var outputFilePathName = "/INF362-EWD/nodejs/"+myUseName;
-var logFileName = "/INF362-EWD/nodejs/"+myUseName+"/ewdLog.txt";
+var EWDTreeDirectory='/INF362-EWD'
+
+var outputFilePathName = EWDTreeDirectory+"/nodejs/"+myUseName;
+var logFileName = EWDTreeDirectory+"/nodejs/"+myUseName+"/ewdLog.txt";
 
 var params = {
   poolSize: 4,
@@ -20,7 +22,7 @@ var params = {
   },
   traceLevel: 8,
   silentStart: false,
-  webServerRootPath: '/INF362-EWD/www',
+  webServerRootPath: EWDTreeDirectory+'/www',
   logTo: 'file',
   logFile: logFileName,
   logHTTP: true,
