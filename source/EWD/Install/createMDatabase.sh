@@ -15,6 +15,10 @@ export gtmgbldir="$EWDAppsGTM/database"
 export gtmroutines="$EWDAppsGTM/o($EWDAppsGTM/r) $gtm_dist/  /opt/gtm/libgtmutil.so"
 alias gtm='$gtm_dist/mumps -dir'
 
+echo "At the GDE>  prompt, type "
+echo "GDE> change -s DEFAULT -f=$EWDAppsGTM/database"
+echo "GDE> exit"
+
 $gtm_dist/mumps -r GDE
 
 $gtm_dist/mupip  create
