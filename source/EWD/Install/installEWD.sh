@@ -9,8 +9,10 @@ mkdir -p /opt/ewd
 pushd /opt/ewd
 
 git clone git://github.com/robtweed/EWD.git
+mkdir -p 960
+cp -r ./EWD/* ./960
 mkdir -p 960/routines/6.0-000
-cp ./EWD/*.m   ./960/routines/
+mv ./960/*.m   ./960/routines/
 pushd ./960/routines/6.0-000
 $gtm_dist/mumps ../*.m
 popd
@@ -43,6 +45,13 @@ npm install -g nodem
 npm install -g ewdglobals
 npm install -g ewdgateway2
 
+#
+#   Post installation of nodem
+#
+cp /usr/local/lib/node_modules/nodem/src/node.m   /data/gtm/r
+pushd /data/gtm/o
+$gtm_dist/mumps ../r/node.m
+popd
 
 #
 #   Create Directory for the installation
@@ -62,6 +71,8 @@ pushd $EWDTreeDirectory/gtm/o
 $gtm_dist/mumps ../r/configEWD.m
 $gtm_dist/mumps -r setup^configEWD
 popd
+
+cp /opt/ewd/960/ewdMgr/resourceFiles/*  $EWDTreeDirectory/www/resources/
 
 #
 #  Install Sencha Touch and ExtJS
