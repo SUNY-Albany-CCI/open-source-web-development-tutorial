@@ -83,8 +83,14 @@ popd
 #
 #         source /data/gtm/setup/add_to_bashrc.txt
 #
+mkdir -p  /data/gtm/setup
+cp  add_to_bashrc.txt  /data/gtm/setup/
 
 
+
+#
+#   Additional files to help with the development of EWD+Node.js apps.
+#
 cp  build.sh    $EWDTreeDirectory/Apps
 cp  runEWDwithNodeJS.sh   $EWDTreeDirectory/nodejs
 cp  ewdConfig.js   $EWDTreeDirectory/nodejs
