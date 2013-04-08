@@ -19,6 +19,16 @@ popd
 
 
 #
+#   Install YUI (The Yahoo User Interface Library)
+#
+mkdir -p /opt/yui
+pushd /tmp
+wget wget http://downloads.sourceforge.net/project/yui/YUI%202/2.6.0/yui_2.6.0r2.zip
+unzip  yui_2.6.0r2.zip -d /opt/yui/yui-2.6
+popd
+
+
+#
 #  Ensure that the user add to its gtmroutines environment variable the path
 #
 #         /opt/ewd/960/routines/6.0-000(/opt/ewd/960/routines)
